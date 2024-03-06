@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Clapping Hands</title>
+  <style>
+    /* Your CSS code here */
+    /* Define keyframes for clapping animation */
+    @keyframes clapAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(15deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      75% {
+        transform: rotate(-15deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+
+      /* Your other styles here */
+
+    }
+    
+    /* Style for the container (replace .container with your actual container class/id) */
+    .container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    /* Style for the clapping hands (replace .clap-hands with your actual class/id) */
+    .clap-hands {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background-color: #f39c12; /* Change color as needed */
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Apply the clap animation on hover */
+    .clap-hands:hover {
+      animation: clapAnimation 0.5s ease infinite;
+    }
+
+    /* Optional: Change background color on hover */
+    .clap-hands:hover {
+      background-color: #e74c3c; /* Change hover color as needed */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your HTML content here -->
+  <div class="container">
+    <div class="clap-hands"></div>
+  </div>
+
+</body>
+</html>
